@@ -1,0 +1,17 @@
+
+void moveZeroes(int *nums, int numsSize)
+{
+    int i, right = 0, left = 0;
+    while (right < numsSize)
+    {
+        if (nums[right] == 0)
+            right++;
+        else
+        {
+            int temp = nums[right];
+            nums[right] = nums[left];
+            nums[left] = temp;
+            right++, left++;
+        }
+    }
+};
